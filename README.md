@@ -20,6 +20,11 @@ The measure, uses and builds upon `d-k-anonymity` [2, 3] and uses uses Nauty [4]
 # Installation
 Before using this code, the Nauty framework should be downloaded from: https://pallini.di.uniroma1.it/
 * Move this git-directory (Anonymity-cascade) in the downloaded nauty directory (nauty27r3)
+* Run the following commands:
+```
+./configure
+make
+```
 * In the makefile in nauty27r3 add the following lines after line #500:
 
 ```
@@ -35,7 +40,8 @@ anonymitycascade :
 			${CMEAS}/dk-anonymity.cpp ${CMEAS}/cascading.cpp traces.o nauty.a ${LDFLAGS}
 
 ```
-`WARNING`: when cleaning the nauty directory, the makefile is regenerated and these lines are deleted.
+`WARNING`: when cleaning the nauty directory, the makefile is regenerated and these lines are deleted.\
+Last tested with nauty version `nauty27r3`
 
 # Compilation
 ```
@@ -101,11 +107,12 @@ Folder `examples` contains some small toy examples to test the d-k-anonymity mea
 * testx.group: The grouping that d-k-anonymity will make if d = diameter(G). Vertices on the same line are in the same group
 * testx.png: A visualization of the graph with each node coloured according to the group it belongs in. Generated with Networkx in `visualize.py`
 
-Note that test1 is an empty graph: networkx does not show these nodes. Therefore `test1.png` is empty
+Note that test1 is an empty graph: networkx does not show these nodes. Therefore `test1` is empty
 Examples can be generated with `visualize.py`, code to generate the examples are given in `examples.sh`
 
 # References
-[1] de Jong, Rachel G., Mark P. J. van der Loo, and Frank W. Takes "Beyond the ego network: The effect of distant connections on node anonymity". (in progress) \
-[2] de Jong, Rachel G., Mark P. J. van der Loo, and Frank W. Takes. "Algorithms for Efficiently Computing Structural Anonymity in Complex Networks." ACM Journal of Experimental Algorithmics (2023). https://doi.org/10.1145/3604908\
-[3] https://github.com/RacheldeJong/dkAnonymity
+[1] de Jong, Rachel G., van der Loo, Mark P. J., & Takes, Frank W. (2023).The effect of distant connections on node anonymity in complex networks. arXiv preprint arXiv:2306.13508.
+ \
+[2] de Jong, Rachel G., Mark P. J. van der Loo, and Frank W. Takes. "Algorithms for Efficiently Computing Structural Anonymity in Complex Networks." ACM Journal of Experimental Algorithmics (2023). https://doi.org/10.1145/3604908 \
+[3] https://github.com/RacheldeJong/dkAnonymity \
 [4] B. D. McKay and A. Piperno, “Practical graph isomorphism”, Journal of Symbolic Computa-tion, vol. 60, no. 0, pp. 94–112, 2014. <br />

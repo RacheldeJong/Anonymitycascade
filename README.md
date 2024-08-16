@@ -18,29 +18,13 @@ The measure, uses and builds upon `d-k-anonymity` [2, 3] and uses uses Nauty [4]
 * `examples`: Directory containing example graphs
 
 # Installation
-Before using this code, the Nauty framework should be downloaded from: https://pallini.di.uniroma1.it/
+Before using this code, the Nauty framework should be downloaded from:  https://users.cecs.anu.edu.au/~bdm/nauty/
 * Move this git-directory (Anonymity-cascade) in the downloaded nauty directory (nauty27r3)
 * Run the following commands:
 ```
 ./configure
 make
 ```
-* In the makefile in nauty27r3 add the following lines after line #500:
-
-```
-CANON = ./Anonymitycascade/src
-CGRAPH = ${CANON}/graph
-CMEAS = ${CANON}/measure
-CPOST = ${CANON}/postprocess
-CEQ = ${CANON}/equivalence
-
-anonymitycascade :
-			g++ -std=c++11 -o  ${CANON}/anonymitycascade ${CFLAGS} ${CANON}/anonymity_cascade.cpp \
-			${CEQ}/equivalence.cpp ${CGRAPH}/graphutil.cpp ${CGRAPH}/graphgen.cpp ${CGRAPH}/twinnode.cpp \
-			${CMEAS}/dk-anonymity.cpp ${CMEAS}/cascading.cpp traces.o nauty.a ${LDFLAGS}
-
-```
-`WARNING`: when cleaning the nauty directory, the makefile is regenerated and these lines are deleted.\
 Last tested with nauty version `nauty27r3`
 
 # Compilation

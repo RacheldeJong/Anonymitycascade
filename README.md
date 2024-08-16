@@ -52,11 +52,11 @@ make anonymitycascade
 To run the code, at least one input graph should be given. Command line arguments are optional.
 Use the following command to run the code:
 ```
-./Anonymitycascade/src/anonymitycascade ./examples/example2 [-arguments]
+./bin/anonymitycascade ./examples/example2 [-arguments]
 ```
 For example:
 ```
-./Anonymitycascade/src/anonymitycascade ./Anonymitycascade/examples/example2 -s 2
+./bin/anonymitycascade ./examples/example2 -s 2
 ```
 
 ## Command line arguments
@@ -111,8 +111,9 @@ Note that test1 is an empty graph: networkx does not show these nodes. Therefore
 Examples can be generated with `visualize.py`, code to generate the examples are given in `examples.sh`
 
 # References
-[1] de Jong, Rachel G., van der Loo, Mark P. J., & Takes, Frank W. (2023).The effect of distant connections on node anonymity in complex networks. arXiv preprint arXiv:2306.13508.
+[1] de Jong, Rachel G., Mark P. J. van der Loo, and Frank W. Takes. "Algorithms for Efficiently Computing Structural Anonymity in Complex Networks." ACM Journal of Experimental Algorithmics (2023). \
+[2] de Jong, Rachel G., Mark P. J. van der Loo, and Frank W. Takes. "The effect of distant connections on node anonymity in complex networks." Scientific Reports 14.1 (2024): 1156.
  \
-[2] de Jong, Rachel G., Mark P. J. van der Loo, and Frank W. Takes. "Algorithms for Efficiently Computing Structural Anonymity in Complex Networks." ACM Journal of Experimental Algorithmics (2023). https://doi.org/10.1145/3604908 \
 [3] https://github.com/RacheldeJong/dkAnonymity \
-[4] B. D. McKay and A. Piperno, “Practical graph isomorphism”, Journal of Symbolic Computa-tion, vol. 60, no. 0, pp. 94–112, 2014. <br />
+[4] B. D. McKay and A. Piperno, “Practical graph isomorphism”, Journal of Symbolic Computa-tion, vol. 60, no. 0, pp. 94–112, 2014.
+

@@ -29,7 +29,7 @@ Last tested with nauty version `nauty27r3`
 
 # Compilation
 ```
-make anonymitycascade 
+make 
 ```
 
 # How to run
